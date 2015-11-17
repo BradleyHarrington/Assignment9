@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Vecta Corp.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+<!--
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.ui.min.css"></script>
+-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-1.7.1.js"></script>-->
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="js/jquery.mobilemenu.js"></script>
+	<script>
+		$(function() {
+			$('#responsive-menu').mobileMenu();
+            $( "#format" ).buttonset();
+            $( "#radio" ).buttonset();
+            $( "#coSize" ).selectmenu();
+            
+		});
+        
+        
+        $(function() {
+            var userConfirmed = false;
+            $("input[type=submit]").button().click(function(event) { 
+                $( "#dialog" ).dialog({
+                    buttons: {
+                    "Yes": function() {
+                    userConfirmed = true;
+                    $("form").submit();
+                },
+                "No, I'll change them.": function() {
+                    $(this).dialog("close");
+                }
+                }
+                });
+            
+		  });
+        });
+  
+	</script>
+</head>
+<body>
+	<main class="container">
+		<figure class="three columns">
+			<img src="images/logo.gif" class="scale-with-grid" alt="">
+		</figure>
+		
+		<nav class="thirteen columns">
+			<ul id="responsive-menu">
+				<li id="home" title=""><a href="index.html">Home</a></li>
+				<li id="aboutus" title=""><a href="aboutus.html">About Us</a></li>
+				<li id="solutions" title=""><a href="solutions.html">Solutions</a></li>
+				<li id="support" title=""><a href="support.html">Support</a></li>
+				<li id="contactus" title=""><a href="contactus.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		
+		<header class="sixteen columns">
+			<img src="images/header.gif" class="scale-with-grid" alt="">
+		</header>
+		
+		<section id="welcome" class="eleven columns">
+			<h4>Contact Us</h4>
+			<form name="contactform" action="http://www.vectacorp.com/vc/scripts/contactus.asp" method="post">
+				<fieldset>
+			    <legend>Contact a Sales Representative</legend>
+			    Name:
+			    <input type="text" name="name" maxlength="30" required="">
+			    Company Name:
+			    <input type="text" name="companyname" maxlength="30" required="">
+			    Phone:
+			    <input type="tel" name="phonenumber" maxlength="25" required="" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Format: 555-555-5555">
+			    
+			    Email:
+				<input type="email" name="email" maxlength="30" required="">
+			   
+                What VectaCorp products are you interested in?<br>
+                <div id="format">
+			    <input type="checkbox" name="product" value="vProspect" id="vProspect"><label for="vProspect">vProspect 2.0</label>
+			    <input type="checkbox" name="product" value="vConvert" id="vConvert"><label for="vConvert">vConvert 2.0</label>
+			    <input type="checkbox" name="product" value="vRetain" id="vRetain"><label for="vRetain">vRetain 1.0</label>
+			    </div>
+			    
+			    <br>
+			    What is your current infrastructure?<br>
+			    <div id="radio">
+			    <input type="radio" name="infrastructure" value="Mac" id="Mac"><label for="Mac">Mac</label>
+			    <input type="radio" name="infrastructure" value="Linux" id="Linux"><label for="Linux">Linux</label>
+			    <input type="radio" name="infrastructure" value="Unix" id="Unix"><label for="Unix">Unix</label>
+			    <input type="radio" name="infrastructure" value="Windows" id="Windows"><label for="Windows">Windows</label>
+			    </div>
+
+			    <br>
+			    <p>How many employees do you have?</p>
+			    <select name="companysize" id="coSize">
+                    <option value="1-10">1-10</option>
+                    <option value="11-100">11-100</option>
+                    <option value="101-1000">101-1000</option>
+                    <option value="More than 1000">More than 1000</option>
+		        </select>
+                
+			    <p>How did you hear about us?</p>
+			    <select name="hearaboutus" multiple="" size="5">
+                    <option value="Magazine Ad">Magazine Ad</option>
+                    <option value="Radio Ad">Radio Ad</option>
+                    <option value="TV Ad">TV Ad</option>
+                    <option value="Word of Mouth">Word of Mouth</option>
+                    <option value="Other">Other</option>
+		        </select>
+                
+			    <p>Questions or comments for our sales representatives?</p>
+			    <textarea name="questions" size="30" rows="5"></textarea>
+			    <input type="submit" name="submit" value="Submit Now">
+			    <div id="dialog" title="Thank You">
+                  <p>Has your form been filled out correctly?<br>The form will not submit if all fields are not filled in correctly.<br><br>Thank you for your interest in our products.  Someone will be in touch with you shortly.</p>
+                </div>
+		    	</fieldset>
+			</form>
+	    </section>
+		
+		<section id="testimonials" class="five columns">
+			<h4>Map</h4>
+			<p>&nbsp;</p>
+
+		</section>
+	</main>
+<script src="js/script.js"></script>	
+</body>
+</html>

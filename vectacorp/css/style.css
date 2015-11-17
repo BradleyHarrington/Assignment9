@@ -1,0 +1,14 @@
+ul.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all {
+    padding-top: 20px;
+}
+div#officeWrapper {
+    clear: both;
+}
+
+.ui-state-active {
+    border: 1px solid #e5e5e5 !important;
+    background: #d5d5d5 !important;
+}
+div#dialog {
+    display: none;
+}

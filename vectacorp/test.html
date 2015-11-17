@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Button - Radios</title>
+<!--  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+  
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
+  <script>
+  $(function() {
+    $( "#radio" ).buttonset();
+  });
+  </script>
+</head>
+<body>
+ 
+<form>
+    <div id="radio">
+			    <input type="radio" name="infrastructure" value="Mac" id="Mac"><label for="Mac">Mac</label>
+			    <input type="radio" name="infrastructure" value="Linux" id="Linux"><label for="Linux">Linux</label>
+			    <input type="radio" name="infrastructure" value="Unix" id="Unix"><label for="Unix">Unix</label>
+			    <input type="radio" name="infrastructure" value="Windows" id="Windows"><label for="Windows">Windows</label>
+
+  </div>
+</form>
+ 
+ 
+</body>
+</html>
